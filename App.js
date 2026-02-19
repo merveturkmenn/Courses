@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './src/screen/HomeScreen';
 import DetailScreen from './src/screen/DetailScreen';
 import CoursesDetailScreen from './src/screen/CoursesDetailScreen';
+import CounterScreen from './src/screen/CounterScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -15,7 +16,8 @@ export default function App() {
     <Stack.Navigator  >
 <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Ana Ekran' }} />
  <Stack.Screen name="Details" component={DetailScreen} options={{ title: 'Detaylar' }} />
- <Stack.Screen name="CoursesDetails" component={CoursesDetailScreen} options={{ title: 'KursDetayları' }} />
+ <Stack.Screen name="CoursesDetails" component={CoursesDetailScreen} options={{ title: 'Kurs Detayları' }} />
+  <Stack.Screen name="Counter" component={CounterScreen} options={{ title: 'Sayaç Uygulaması' }} />
     </Stack.Navigator>
    </NavigationContainer>
   )
