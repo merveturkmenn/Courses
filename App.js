@@ -6,6 +6,7 @@ import HomeScreen from './src/screen/HomeScreen';
 import DetailScreen from './src/screen/DetailScreen';
 import CoursesDetailScreen from './src/screen/CoursesDetailScreen';
 import CounterScreen from './src/screen/CounterScreen';
+import BoxScreen from './src/screen/BoxScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -18,6 +19,7 @@ export default function App() {
  <Stack.Screen name="Details" component={DetailScreen} options={{ title: 'Detaylar' }} />
  <Stack.Screen name="CoursesDetails" component={CoursesDetailScreen} options={{ title: 'Kurs Detayları' }} />
   <Stack.Screen name="Counter" component={CounterScreen} options={{ title: 'Sayaç Uygulaması' }} />
+   <Stack.Screen name="Box" component={BoxScreen} options={{ title: 'Kutu Uygulaması' }} />
     </Stack.Navigator>
    </NavigationContainer>
   )
