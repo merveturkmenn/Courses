@@ -23,6 +23,10 @@ export default function HomeScreen({ navigation} ) {
         title="Kutu Uygulaması"
         onPress={() => navigation.navigate('Box')}
       />
+      <Button
+        title="Banka Uygulaması"
+        onPress={() => navigation.navigate('Bank')}
+      />
       
     </View>
   )

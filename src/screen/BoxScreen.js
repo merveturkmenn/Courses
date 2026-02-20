@@ -33,8 +33,7 @@ export default function BoxScreen() {
                         justifyContent: 'center'}} />
                 }}
                 />
-                 
-              
+                    
     </View>
   )
 }
