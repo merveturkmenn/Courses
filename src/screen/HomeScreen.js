@@ -27,6 +27,10 @@ export default function HomeScreen({ navigation} ) {
         title="Banka Uygulaması"
         onPress={() => navigation.navigate('Bank')}
       />
+      <Button
+        title="Renk Mixer Uygulaması"
+        onPress={() => navigation.navigate('Mixer')}
+      />
       
     </View>
   )
