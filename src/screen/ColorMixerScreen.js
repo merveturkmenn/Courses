@@ -22,6 +22,9 @@ const reducer = (state, action) => {
       }
       return { ...state, blue: state.blue + action.payload };
 
+      case 'reset':
+      return { red: 0, green: 0, blue:0 };
+
     default:
       return state;
   }
@@ -59,11 +62,17 @@ export default function ColorMixerScreen() {
           onIncrease={() => dispatch({ type: 'mavi_degistir', payload: 20 })}
           onDecrease={() => dispatch({ type: 'mavi_degistir', payload: -20 })}
         />
+        <TouchableOpacity style={styles.resetButon}
+          
+          onPress={() => dispatch({ type: 'reset' })}
+        >
+          <Text style={styles.resetText}>RESET</Text>
+        </TouchableOpacity>
+
       </View>
     </View>
   );
 }
-
 
 const ColorButton = ({ colorName, onIncrease, onDecrease }) => (
   <View style={styles.btnRow}>
@@ -79,6 +88,9 @@ const styles = StyleSheet.create({
   box: { width: 200, height: 200, borderRadius: 20, marginBottom: 30, borderWidth: 1, borderColor: '#ddd' },
   controls: { width: '80%' },
   btnRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 15 },
-  colorText: { fontSize: 18, fontWeight: '500' },
-  btn: { backgroundColor: '#f0f0f0', padding: 10, width: 40, alignItems: 'center', borderRadius: 5 }
+  colorText: { fontSize: 18, fontWeight: '500',width: 80, },
+  btn: { backgroundColor: '#f0f0f0', padding: 10, width: 40, alignItems: 'center', borderRadius: 5 },
+  resetButon: { backgroundColor: '#ff4444', padding: 15, borderRadius: 10, marginTop: 10, alignItems: 'center' },
+  resetText: { color: '#fff', fontWeight: 'bold', fontSize: 16  }
+
 });
